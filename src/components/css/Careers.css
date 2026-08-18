@@ -1,0 +1,548 @@
+/* =========================================
+   CAREERS SECTION
+========================================= */
+
+.careers-section {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* background atmosphere */
+
+.careers-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -280px;
+  top: 10%;
+
+  background: radial-gradient(
+    circle,
+    rgba(84, 245, 220, 0.07),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.careers-heading {
+  margin-bottom: 65px;
+}
+
+.careers-heading h2 {
+  margin-top: 12px;
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  font-weight: 700;
+}
+
+.careers-heading h2 span {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #54f5dc
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.careers-heading p {
+  max-width: 470px;
+
+  line-height: 1.8;
+
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   CAREER GRID
+========================================= */
+
+.career-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   CAREER CARD
+========================================= */
+
+.career-card {
+  position: relative;
+
+  min-height: 360px;
+
+  padding: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 60px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* glowing top line */
+
+.career-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 15%;
+
+  width: 70%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #54f5dc,
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+
+/* hover glow */
+
+.career-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -120px;
+  top: -100px;
+
+  background: radial-gradient(
+    circle,
+    rgba(84, 245, 220, 0.12),
+    transparent 70%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+
+.career-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(84, 245, 220, 0.25);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.28),
+    0 0 40px rgba(84, 245, 220, 0.05);
+}
+
+.career-card:hover::before,
+.career-card:hover::after {
+  opacity: 1;
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.career-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 65px;
+}
+
+.career-number {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #54f5dc;
+
+  padding: 8px 11px;
+
+  border-radius: 9px;
+
+  background: rgba(84, 245, 220, 0.07);
+
+  border: 1px solid rgba(84, 245, 220, 0.12);
+}
+
+.career-type {
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  padding: 7px 10px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.career-content {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+}
+
+.career-stack {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  font-size: 10px;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+
+  color: #54f5dc;
+
+  opacity: 0.8;
+}
+
+.career-content h3 {
+  margin: 0 0 14px;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.6px;
+}
+
+.career-content p {
+  max-width: 340px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   APPLY LINK
+========================================= */
+
+.career-apply {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.career-arrow {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    background 0.35s ease;
+}
+
+.career-card:hover .career-apply {
+  color: #ffffff;
+}
+
+.career-card:hover .career-arrow {
+  transform: translate(3px, -3px);
+
+  color: #54f5dc;
+
+  background: rgba(84, 245, 220, 0.08);
+}
+
+
+/* =========================================
+   OPEN APPLICATION
+========================================= */
+
+.open-application {
+  position: relative;
+
+  margin-top: 18px;
+
+  padding: 34px 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(84, 245, 220, 0.08),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(84, 245, 220, 0.14);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* CTA glow */
+
+.open-application::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -150px;
+  top: -200px;
+
+  background: radial-gradient(
+    circle,
+    rgba(84, 245, 220, 0.12),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   OPEN CONTENT
+========================================= */
+
+.open-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.open-content h3 {
+  margin: 10px 0 8px;
+
+  font-size: 24px;
+
+  letter-spacing: -0.5px;
+}
+
+.open-content p {
+  margin: 0;
+
+  max-width: 560px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.open-application-btn {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 14px 16px 14px 22px;
+
+  border-radius: 12px;
+
+  background: #54f5dc;
+
+  color: #071311;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.open-application-btn span:last-child {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.12);
+
+  font-size: 17px;
+}
+
+.open-application-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 35px rgba(84, 245, 220, 0.18);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .open-application {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .open-application-btn {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 500px) {
+  .career-card {
+    min-height: 340px;
+
+    padding: 24px;
+  }
+
+  .careers-heading h2 {
+    letter-spacing: -2px;
+  }
+}
