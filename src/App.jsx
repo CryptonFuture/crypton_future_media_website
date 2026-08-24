@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Mission from "./components/Mission";
 import Services from "./components/Services";
+import Projects from "./components/Projects";
 import WhyUs from "./components/WhyUs";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
@@ -27,6 +28,7 @@ export default function App() {
         <About />
         <Mission />
         <Services />
+        <Projects />
         <WhyUs />
         <Team />
         <Careers />

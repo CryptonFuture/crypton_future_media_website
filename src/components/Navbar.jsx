@@ -1,12 +1,15 @@
-
 import { useState } from "react";
-import '../components/css/Navbar.css'
+import "../components/css/Navbar.css";
 
 const links = [
   ["home", "Home"],
   ["about", "About"],
   ["mission", "Mission"],
   ["services", "Services"],
+
+  // New Projects section
+  ["projects", "Projects"],
+
   ["whyus", "Why Us"],
   ["team", "Team"],
   ["careers", "Careers"],
@@ -15,7 +18,11 @@ const links = [
 
 function Logo() {
   return (
-    <a href="#home" className="brand" aria-label="Crypton Future Media">
+    <a
+      href="#home"
+      className="brand"
+      aria-label="Crypton Future Media"
+    >
       <span className="brand-icon">
         <i />
         <i />
@@ -34,7 +41,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`navbar ${open ? "menu-active" : ""}`}>
+    <header
+      className={`navbar ${open ? "menu-active" : ""}`}
+    >
       <div className="container nav-inner">
 
         <Logo />
@@ -50,7 +59,9 @@ export default function Navbar() {
           <span />
         </button>
 
-        <nav className={`nav-links ${open ? "open" : ""}`}>
+        <nav
+          className={`nav-links ${open ? "open" : ""}`}
+        >
           {links.map(([id, label]) => (
             <a
               key={id}
@@ -75,6 +86,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-
-
