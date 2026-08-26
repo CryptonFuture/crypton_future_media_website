@@ -82,7 +82,7 @@ const projects = [
     ],
 
     github: "#",
-    demo: "#",
+    demo: "https://ai-homeopathic-inventory-frontend.vercel.app/",
   },
 
   {
