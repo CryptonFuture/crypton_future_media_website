@@ -8,6 +8,9 @@ import {
 
 import Matrix from "../assets/Matrix.png";
 import Medical from "../assets/Medical.png";
+import Gaming from "../assets/gaming.png";
+import Aether from '../assets/Aether.png'
+import Rag from '../assets/RagChat.png'
 
 import "./css/Projects.css";
 
@@ -87,12 +90,12 @@ const projects = [
 
   {
     id: 4,
-    title: "E-Commerce API",
+    title: "Nexus Gear",
     description:
       "Scalable backend API for an e-commerce platform with authentication, products, orders, payments and database management.",
     category: "Backend",
 
-    image: "/projects/ecommerce.jpg",
+    image: Gaming,
 
     icon: <Code2 size={30} />,
 
@@ -115,7 +118,7 @@ const projects = [
       "Retrieval-Augmented Generation based AI assistant capable of searching contextual knowledge and generating intelligent responses.",
     category: "Generative AI",
 
-    image: "/projects/rag-ai.jpg",
+    image: Rag,
 
     icon: <BrainCircuit size={30} />,
 
@@ -134,12 +137,12 @@ const projects = [
 
   {
     id: 6,
-    title: "3D Interactive Portfolio",
+    title: "Aether Medicine",
     description:
       "Modern interactive portfolio experience featuring 3D visual elements, animations, particles and responsive UI.",
     category: "Creative Development",
 
-    image: "/projects/3d-portfolio.jpg",
+    image: Aether,
 
     icon: <Layers3 size={30} />,
 
