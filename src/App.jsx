@@ -10,6 +10,8 @@ import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Careers from "./components/Careers";
 import Footer from "./components/Footer";
+import StatsCounter from './components/StatsCounter'
+import Clients from "./components/Clients";
 
 export default function App() {
   const [showTop, setShowTop] = useState(false);
@@ -32,7 +34,9 @@ export default function App() {
         <WhyUs />
         <Team />
         <Careers />
+        <StatsCounter />
         <Contact />
+        <Clients />
       </main>
       <Footer />
 

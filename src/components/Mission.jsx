@@ -13,7 +13,7 @@ export default function Mission() {
         <div className="mission-heading">
           <div className="mission-kicker">
             <span className="kicker-line" />
-            <span>03 / WHY US</span>
+            <span>03 / OUR MISSION</span>
           </div>
 
           <h2>

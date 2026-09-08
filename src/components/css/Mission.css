@@ -392,3 +392,24 @@
     font-size: 12px;
   }
 }
+
+.mission-image-wrapper {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mission-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mission-image-wrapper:hover .mission-image {
+  transform: scale(1.03);
+}
